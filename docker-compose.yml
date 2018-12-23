@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web:
+    image: openpresta/prestashop:1.7.5.x-php7.2
+    build:
+      context: .
+    ports:
+      - 88:80
+    volumes:
+      - ./volumes/config:/var/www/html/app/config
+      - ./volumes/logs:/var/log/apache2
